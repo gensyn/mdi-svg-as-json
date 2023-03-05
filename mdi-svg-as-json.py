@@ -13,7 +13,7 @@ for icon_obj in icon_dict:
     title = icon_obj.get("n")
     path = icon_obj.get("p")
 
-    icons[title] = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>{title}</title><path d="{path}" /></svg>'
+    icons[title] = path
 
 with open('mdi-svg.json', 'w') as file:
-    file.write(json.dumps(icons))
+    file.write(json.dumps(icons, indent=2))
