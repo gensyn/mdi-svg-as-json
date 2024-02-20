@@ -1,10 +1,10 @@
 import requests
 import json
 
-URL = 'https://pictogrammers.com/_next/static/chunks/981.4f0849cd440234f9.js'
+URL = 'https://pictogrammers.com/data/mdi-7.4.47.json'
 
 response = requests.get(URL)
-response_json = json.loads(response.text.split("'")[1])
+response_json = json.loads(response.text)
 icon_dict = response_json.get("i")
 
 icons = {}
